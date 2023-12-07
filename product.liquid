@@ -1,0 +1,55 @@
+{% comment %}
+  product.liquid
+  This is the template for individual product pages.
+{% endcomment %}
+
+{% section 'header' %}
+
+<div class="product-container">
+  <div class="product-image">
+    <img src="{{ product.featured_image | img_url: 'large' }}" alt="{{ product.title }}">
+  </div>
+
+  <div class="product-details">
+    <h1 class="product-title">{{ product.title }}</h1>
+    <p class="product-description">{{ product.description }}</p>
+
+    <div class="product-options">
+      <label for="product-size">Size:</label>
+      <select id="product-size" name="size">
+        {% for variant in product.variants %}
+          <option value="{{ variant.id }}">{{ variant.title }}</option>
+        {% endfor %}
+      </select>
+
+      <label for="product-color">Color:</label>
+      <select id="product-color" name="color">
+        {% for option in product.options_with_values %}
+          {% if option.name == 'Color' %}
+            {% for value in option.values %}
+              <option value="{{ value | downcase }}">{{ value }}</option>
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </select>
+    </div>
+
+    <p class="product-price">${{ product.price | money }}</p>
+
+    <button class="buy-now-button">Buy Now</button>
+  </div>
+</div>
+
+<div class="related-products">
+  <h2>Related Products</h2>
+  {% for product in collections.all.products limit: 3 %}
+    <div class="related-product">
+      <a href="{{ product.url }}">
+        <img src="{{ product.featured_image | img_url: 'small' }}" alt="{{ product.title }}">
+        <p>{{ product.title }}</p>
+      </a>
+    </div>
+  {% endfor %}
+</div>
+
+{% section 'footer' %}

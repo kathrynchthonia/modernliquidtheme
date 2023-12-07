@@ -1,0 +1,32 @@
+{% comment %}
+  collection.liquid
+  This is the template for the store page that displays a list of products.
+{% endcomment %}
+
+{% section 'header' %}
+
+<div class="collection-container">
+  <div class="collection-filters">
+    <label for="category-filter">Filter by Category:</label>
+    <select id="category-filter" name="category">
+      <option value="all">All</option>
+      {% for collection in collections %}
+        <option value="{{ collection.handle }}">{{ collection.title }}</option>
+      {% endfor %}
+    </select>
+  </div>
+
+  <div class="product-grid">
+    {% for product in collection.products %}
+      <div class="product-item">
+        <a href="{{ product.url }}">
+          <img src="{{ product.featured_image | img_url: 'medium' }}" alt="{{ product.title }}">
+          <h3>{{ product.title }}</h3>
+          <p class="product-price">${{ product.price | money }}</p>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
+</div>
+
+{% section 'footer' %}

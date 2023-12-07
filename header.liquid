@@ -1,0 +1,23 @@
+{% comment %}
+  header.liquid
+  This is the template for the header, including a navigation bar.
+{% endcomment %}
+
+<header class="site-header">
+  <div class="container">
+    <div class="logo">
+      <a href="{{ shop.url }}">
+        <img src="{{ 'logo.png' | asset_url }}" alt="Your Logo">
+      </a>
+    </div>
+
+    <nav class="main-navigation">
+      <ul>
+        <li><a href="{{ shop.url }}">Home</a></li>
+        <li><a href="{{ collection.all.url }}">Shop</a></li>
+        <li><a href="{{ pages.about-us.url }}">About Us</a></li>
+        <li><a href="{{ pages.contact.url }}">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>

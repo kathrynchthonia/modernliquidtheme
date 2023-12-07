@@ -1,0 +1,36 @@
+{% comment %}
+  layout.liquid
+  This is the template for the overall layout structure.
+{% endcomment %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page_title }}</title>
+
+  <!-- Include your CSS file in the header -->
+  <link rel="stylesheet" href="{{ 'styles.css' | asset_url }}">
+</head>
+
+<body>
+
+  <!-- Include the header and navbar -->
+  {% section 'header' %}
+  {% section 'navbar' %}
+
+  <!-- Page Content -->
+  <div class="page-content">
+    {{ content_for_layout }}
+  </div>
+
+  <!-- Include the footer -->
+  {% section 'footer' %}
+
+  <!-- Include your JavaScript file in the footer -->
+  <script src="{{ 'scripts.js' | asset_url }}"></script>
+</body>
+
+</html>

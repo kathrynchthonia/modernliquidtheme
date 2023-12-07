@@ -1,0 +1,36 @@
+{% comment %}
+  index.liquid
+  This is the template for the homepage with a hero banner and product features.
+{% endcomment %}
+
+{% section 'header' %}
+
+<section class="hero-banner">
+  <div class="hero-content">
+    <h1>Welcome to Our Store</h1>
+    <p>Discover the latest trends and shop your favorite products.</p>
+    <a href="{{ collection.featured.url }}" class="shop-now-button">Shop Now</a>
+  </div>
+</section>
+
+<section class="product-features">
+  <div class="feature">
+    <img src="{{ 'feature1.jpg' | asset_url }}" alt="Feature 1">
+    <h2>Free Shipping</h2>
+    <p>Enjoy free shipping on all orders over $50.</p>
+  </div>
+
+  <div class="feature">
+    <img src="{{ 'feature2.jpg' | asset_url }}" alt="Feature 2">
+    <h2>Quality Products</h2>
+    <p>Explore our curated selection of high-quality products.</p>
+  </div>
+
+  <div class="feature">
+    <img src="{{ 'feature3.jpg' | asset_url }}" alt="Feature 3">
+    <h2>Easy Returns</h2>
+    <p>We offer hassle-free returns within 30 days.</p>
+  </div>
+</section>
+
+{% section 'footer' %}

@@ -1,0 +1,383 @@
+/* Styles for the header */
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+/* styling for product page */
+
+.product-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+.product-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.product-details {
+  flex: 1;
+  margin-left: 20px;
+}
+
+.product-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.product-description {
+  margin-bottom: 15px;
+}
+
+.product-options {
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+  }
+}
+
+.product-price {
+  font-size: 18px;
+  margin-bottom: 15px;
+}
+
+.buy-now-button {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.buy-now-button:hover {
+  background-color: #2980b9;
+}
+
+.related-products {
+  margin-top: 30px;
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  .related-product {
+    width: 30%;
+    margin-right: 10px;
+
+    a {
+      text-decoration: none;
+      color: #333;
+
+      img {
+        max-width: 100%;
+        height: auto;
+        margin-bottom: 5px;
+      }
+
+      p {
+        font-size: 16px;
+      }
+    }
+  }
+}
+/* Add styling for header */
+
+.site-header {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo img {
+  max-width: 150px; /* Adjust the max-width as needed */
+  height: auto;
+}
+
+.main-navigation ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-navigation li {
+  margin-right: 20px;
+}
+
+.main-navigation a {
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+}
+
+.main-navigation a:hover {
+  color: #ffd700; /* Adjust the hover color as needed */
+}
+
+/* Add styling for footer */
+
+.site-footer {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.footer-section {
+  width: 30%;
+}
+
+h3 {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+ul li {
+  margin-bottom: 5px;
+}
+
+a {
+  text-decoration: none;
+  color: #ffd700; /* Adjust the link color as needed */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Add styling for store page */
+
+.collection-container {
+  padding: 20px;
+}
+
+.collection-filters {
+  margin-bottom: 20px;
+
+  label {
+    margin-right: 10px;
+  }
+
+  select {
+    padding: 8px;
+  }
+}
+
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.product-item {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: center;
+
+  a {
+    text-decoration: none;
+    color: #333;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 10px;
+    }
+
+    h3 {
+      font-size: 16px;
+      margin-bottom: 5px;
+    }
+
+    .product-price {
+      font-size: 14px;
+      color: #888;
+    }
+  }
+
+  &:hover {
+    border-color: #3498db; /* Adjust the hover border color as needed */
+  }
+}
+/* Add styling for homepage */
+
+.hero-banner {
+  background-image: url('{{ 'hero-banner.jpg' | asset_url }}'); /* Replace with your actual image URL */
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  text-align: center;
+  padding: 100px 20px;
+
+  .hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
+    .shop-now-button {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 18px;
+      background-color: #3498db; /* Adjust the button color as needed */
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #2980b9; /* Adjust the hover color as needed */
+      }
+    }
+  }
+}
+
+.product-features {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-start;
+  padding: 50px 20px;
+
+  .feature {
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 20px;
+    }
+
+    h2 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 16px;
+    }
+  }
+}
+/* Add styling for contact form, terms of service, and privacy policy pages */
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.contact-form-section,
+.terms-of-service-section,
+.privacy-policy-section {
+  padding: 50px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+
+  form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 15px;
+    }
+
+    button {
+      grid-column: span 2;
+      padding: 10px;
+      font-size: 16px;
+      background-color: #3498db; /* Adjust the button color as needed */
+      color: #fff;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+
+      &:hover {
+        background-color: #2980b9; /* Adjust the hover color as needed */
+      }
+    }
+  }
+}
+/* Add styling for About Us page */
+
+.about-us-section {
+  padding: 50px 20px;
+  text-align: center;
+
+  h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+  }
+
+  img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+
+  p {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+}
